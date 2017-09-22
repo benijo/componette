@@ -48,11 +48,10 @@
     {block #head}{/block}
 </head>
 <body>
-    <!-- Container -->
-    <div class="main-container container">
 
-        <!-- Header -->
-        <div class="header">
+    <!-- Header -->
+    <div class="header">
+        <div class="main-container container">
             <div class="row">
                 <div class="col-xs-1 header-col">
                     <a class="main-title" n:href=":Front:Home:"><img src="https://avatars3.githubusercontent.com/u/10809856?v=3&s=50" title="Componette <3"></a>
@@ -64,7 +63,11 @@
                 </div>
             </div>
         </div>
-        <!-- /Header -->
+    </div>
+    <!-- /Header -->
+
+    <!-- Container -->
+    <div class="main-container container">
 
         <!-- Flashes -->
         <div class="alerts" n:inner-foreach="$flashes as $flash">
@@ -78,7 +81,7 @@
             <div n:if="!$presenter->isLinkCurrent(':Front:Portal:Index:search')" class="search" n:snippet="search-result"></div>
             <!-- /Search -->
             {ifset #wrapper}
-                <div class="box">
+                <div class="">
                     {block #wrapper}
                     <div class="row row-flex">
                         <!-- Content(9) -->
